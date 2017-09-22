@@ -66,7 +66,6 @@ def dumps(obj):
         cls = dumps_cls,
         indent = dumps_indent,
         separators = dumps_separators,
-        encoding = dumps_encoding,
         default = dumps_default,
         sort_keys = dumps_sort_keys
     )

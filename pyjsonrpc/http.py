@@ -94,9 +94,9 @@ def http_request(
         request.add_header("Content-Encoding", "gzip")
         request.add_header("Accept-Encoding", "gzip")
         spooled_file.seek(0)
-        request.add_data(spooled_file)
+        request.data = spooled_file
     else:
-        request.add_data(json_string)
+        request.data = json_string.encode('utf-8')
 
     # Content Type
     request.add_header("Content-Type", content_type or "application/json")
